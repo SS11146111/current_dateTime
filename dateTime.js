@@ -9,14 +9,23 @@ var dateTime = function()
     let m;
     
     if(hrs>12)
-        {
-            hrs=hrs-12;
-            m="PM"
-        }
-    else
-        {
-            m="AM"
-        }
+    {
+        hrs=hrs-12;
+        m="PM"
+    }
+    else if(hrs == 0)
+    {
+        hrs=12;
+        m="AM"
+    }
+    else if(hrs==12)
+    {
+        m="PM"
+    }
+    else 
+    {
+        m="AM"
+    }
 
 
     switch(day)
